@@ -53,14 +53,14 @@ export const CAMPSITES = [
             {
                 id: 0,
                 rating: 5, 
-                text: "What a magnificent view!",
+                text: "What a magnificent view #2!",
                 author: "Tinus Lorvaldes",
                 date: "2018-10-25T16:30Z"
             },
             {
                 id: 1,
                 rating: 4, 
-                text: "The campground was beautiful, but the bugs could bite sometimes.",
+                text: "The campground was beautiful, but the bugs could bite sometimes. This is a test",
                 author: "Brennen Ech",
                 date: "2017-06-17T03:33Z"
             },
