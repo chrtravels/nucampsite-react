@@ -13,9 +13,10 @@ const mapStateToProps = state => {
   return {
     campsites: state.campsites,
     comments: state.comments,
-    partners: state.promotions
-  }
-}
+    partners: state.partners,
+    promotions: state.promotions
+  };
+};
 class Main extends Component {
 
   render() {
