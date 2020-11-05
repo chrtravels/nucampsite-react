@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import {AnimateKeyframes} from 'react-simple-animate';
+
 class Header extends Component {
 
   constructor(props) {
@@ -40,6 +42,23 @@ class Header extends Component {
         <Jumbotron fluid>
           <div className="container">
             <div className="row">
+              {/* Using React Simple Animate - https://alligator.io/react/craft-simple-animations-in-react/*/}         
+              <div style={{display: 'inline-block' }}>
+        <AnimateKeyframes
+          play
+          iterationCount="infinite"
+          direction="normal"
+          durationSeconds={4}
+          duration={2}
+          keyframes={[
+            'transform: rotateZ(0)',
+            'transform: rotateZ(360deg)',
+          ]}
+        >
+          <img src="/assets/images/logo.png"/>
+        </AnimateKeyframes>
+      </div>
+      {/* End Of Animation */}
               <div className="col">
                 <h1>Nucamp</h1>
                 <h2>A better way to camp</h2>
@@ -49,7 +68,9 @@ class Header extends Component {
         </Jumbotron>
         <Navbar dark sticky="top" expand="md">
           <div className="container">
-              <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="Nucamp" /> </NavbarBrand>
+              <NavbarBrand className="mr-auto" href="/">
+                <img src="/assets/images/logo.png" height="30" width="30" alt="Nucamp" />
+                 </NavbarBrand>     
               <NavbarToggler onClick={this.toggleNav} />
               <Collapse isOpen={this.state.isNavOpen} navbar>
                 <Nav navbar>
